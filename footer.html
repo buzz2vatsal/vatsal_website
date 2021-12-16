@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="myApp">
+<footer class="p-footer">
+    <div class="ctr">
+        <div class="full-info">
+            <div class="branding">
+                <div class="title">Vatsal <span>Patel</span></div>
+                <p>Gandhinagar, Gujarat, India<br>vatsal.anant.patel@gmail.com<br><a href="tel:+918469430170">(846) 943-0170</a>
+                    
+                </p>
+                
+            </div>
+            <div class="bl-stay" ng-controller="subscriptionCtrl">
+                <div class="box">
+                    <div class="title">Stay in touch</div>
+                    <p>Subscribe to get latest updates and know how.</p>
+                    <div class="form-footer">
+                        <form>
+                            <input type="text" ng-model="data.email" placeholder="Enter your Email here">
+                            <input class="btn-subscribe" type="submit" ng-click="makeSubscription(1, 'f')"
+                                value="Subscribe">
+                        </form>
+                        <!-- <span>{{resultMSG}}</span> -->
+                    </div>
+                </div>
+                <div class="bl-report" id="report_footer">
+                    <span class="title">Thank You!</span>
+                    <p>{{resultMSG}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bl-soc_adress">
+            <div class="soc">
+                <ul class="lsn bl-social">
+                    <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/in/sangreel/">linkedin</a>
+                    </li>
+                    <li class="github"><a target="_blank" href="https://github.com/SanGreel">github</a></li>
+                    <li class="telegram"><a target="_blank" href="https://t.me/s/film1319">telegram</a></li>
+                    <li class="kaggle"><a target="_blank" href="https://www.kaggle.com/sangreel">kaggle</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

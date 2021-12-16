@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="myApp">
+
+
+<header class="p-header">
+    <div class="ctr">
+        <div class="branding">
+            <a href="index.html">
+                <p><b>Vatsal</b> Patel</p>
+            </a>
+        </div>
+
+        <div id="toggle-menu" class="hamburger hamburger--slider btn-menu">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
+
+        <div id="btn-search">Search</div>
+
+        <div class="box-menu" id="my-menu">
+            <ul class="bl-menu lsn">
+                <!--<li class="page9"><i class="hover-line"></i><a href="/">home</a></li>-->
+                <li class="page1"><i class="hover-line"></i><a href="blog.html">blog</a></li>
+                <li class="page2"><i class="hover-line"></i><a href="portfolio.html">portfolio</a></li>
+                <!-- <li class="page11"><i class="hover-line"></i><a href="photo.html">photo</a></li> -->
+                <li class="page3"><i class="hover-line"></i><a href="about.html">about</a></li>
+                <!--                 <li class="page4"><i class="hover-line"></i><a href="/subscribe">subscribe</a></li> -->
+                <li class="page4"><i class="hover-line"></i><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="s-search" id="my-search">
+        <div class="wrapper">
+            <div class="close"></div>
+            <div class="box-form" id="box_form-search" ng-controller="searchCtrl">
+                <form ng-submit="makeSearch()" id="form_feedback">
+                    <div class="input-form">
+                        <input class="input search_input" type="text" placeholder="haker" ng-model="data.q"
+                            autofocus>
+                        <button type="submit" class="btn btn-search" id="btn_search" ng-click="makeSearch()">
+                    </div>
+                    <p class="help">{{resultMSG}}</p>
+                </form>
+            </div>
+        </div>
+    </section>
+</header>
+
+</html>

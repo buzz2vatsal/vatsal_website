@@ -1,0 +1,155 @@
+
+<!doctype html>
+<html ng-app="myApp">
+    
+            <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<link rel="alternate" href="https://andrewkurochkin.com" hreflang="x-default">
+				
+				
+				
+                <meta name="keywords" content="404, error page, 404 error page, 404 error, 404 page" />
+                <meta name="description" content="404 error page at Andrew Kurochkin's personal site"  />
+
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+                <meta name="robots" content="index, follow" />
+
+                <title>404 Not Found </title>
+
+                <link type="text/css" href="/view/public/css/hamburgers.css" rel="stylesheet" media="screen" /><link type="text/css" href="/view/public/css/animate.css" rel="stylesheet" media="screen" /><link type="text/css" href="/view/public/css/core.css" rel="stylesheet" media="screen" />
+                <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,700i,800,900&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+		        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		        <link rel="icon" type="image/png" href="/favicon.png">
+
+		        
+		        
+                <script type="text/javascript" src="/view/public/js/angular.js"></script><script type="text/javascript" src="/view/public/js/app.js"></script>
+
+            </head>
+        
+	<body>		<div class="wrap">
+            <header class="p-header">
+    <div class="ctr">
+        <div class="branding">
+            <a href="/">
+                <p><b>Andrew</b> Kurochkin</p>
+            </a>
+        </div>
+
+        <div id="toggle-menu" class="hamburger hamburger--slider btn-menu">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
+
+        <div id="btn-search">Search</div>
+
+        <div class="box-menu" id="my-menu">
+            <ul class="bl-menu lsn">
+                <!--<li class="page9"><i class="hover-line"></i><a href="/">home</a></li>-->
+                <li class="page1"><i class="hover-line"></i><a href="/blog">blog</a></li>
+                <li class="page2"><i class="hover-line"></i><a href="/portfolio">portfolio</a></li>
+                <li class="page11"><i class="hover-line"></i><a href="/photo">photo</a></li>
+                <li class="page3"><i class="hover-line"></i><a href="/about">about</a></li>
+<!--                 <li class="page4"><i class="hover-line"></i><a href="/subscribe">subscribe</a></li> -->
+                <li class="page8"><i class="hover-line"></i><a href="/contact">contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="s-search" id="my-search">
+        <div class="wrapper">
+            <div class="close"></div>
+            <div class="box-form" id="box_form-search" ng-controller="searchCtrl">
+                <form ng-submit="makeSearch()" id="form_feedback">
+                    <div class="input-form">
+                        <input class="input search_input" type="text" placeholder="haker" ng-model="data.q" autofocus>
+                        <button type="submit" class="btn btn-search" id="btn_search" ng-click="makeSearch()">
+                    </div>
+                    <p class="help">{{resultMSG}}</p>
+                </form>
+            </div>
+        </div>
+    </section>
+</header>			<section class="s-post" rel="main">
+				<div class="ctr ns-404">
+					<div class="box-title">
+						<h1>Error 404</h1>
+						<h2>Unfortunately, you have tried to open a page that doesn't exist.</h2>
+					</div>
+					<div class="item item-slider article_item post">
+<!-- 						<div class="bl-foto"><img src="/view/public/img/404.png" alt="f1"></div> -->
+						<div class="bl-404-foto"><span class="msg">404 :(</span></div>
+
+						<div class="bl_ctr">
+							<div class="bl-info"><p>I suggest you to visit <a href="/blog" class="red-underline">blog</a> or go to <a href="/" class="red-underline">the home page</a>.</p><br/>
+								<blockquote>
+									The website hosting server will typically generate a "404 Not Found" web page when a user attempts to follow a broken or dead link; hence the 404 error is one of the most recognizable errors encountered on the World Wide Web.
+									<br/><br/><br/>
+									<b>Wikipedia</b>
+								</blockquote>
+
+								<br/>
+
+							</div>
+						</div>
+					</div>
+			    </div>
+			</section>
+
+            
+<footer class="p-footer">
+    <div class="ctr">
+        <div class="full-info">
+            <div class="branding">
+                <div class="title">Andrew <span>Kurochkin</span></div>
+                <p>Lviv, Ukraine<br>me(at)andrewkurochkin.com</p>
+            </div>
+            <div class="bl-stay" ng-controller="subscriptionCtrl">
+                <div class="box">
+                    <div class="title">Stay tuned</div>
+                    <p>Join 118 other followers and sign up to receive the latest news from me.</p>
+                    <div class="form-footer">
+                        <form>
+                            <input type="text" ng-model="data.email" placeholder="Enter your Email here">
+                            <input class="btn-subscribe" type="submit" ng-click="makeSubscription(1, 'f')" value="Subscribe">
+                        </form>
+                        <span>{{resultMSG}}</span>
+                    </div>
+                </div>
+                <div class="bl-report" id="report_footer">
+                    <span class="title">Thank You!</span>
+                    <p>{{resultMSG}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bl-soc_adress">
+            <div class="soc">
+                <ul class="lsn bl-social">
+                    <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/in/sangreel/">linkedin</a></li>
+                    <li class="github"><a target="_blank" href="https://github.com/SanGreel">github</a></li>
+                    <li class="telegram"><a target="_blank" href="https://t.me/s/film1319">film photo</a></li>
+<!--
+                    <li class="kaggle"><a target="_blank" href="https://www.kaggle.com/sangreel">kaggle</a></li>
+                    <li class="telegram"><a target="_blank" href="https://t.me/akurochkin">telegram</a></li>
+-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+		</div>
+
+        <script type="text/javascript" src="/view/public/js/jquery-1.11.3.min.js"></script><script type="text/javascript" src="/view/public/js/jquery.viewportchecker.min.js"></script><script type="text/javascript" src="/view/public/js/jquery.validate.min.js"></script><script type="text/javascript" src="/view/public/js/blog.js"></script><script type="text/javascript" src="/view/public/js/core.js"></script>
+			<script async src='https://www.googletagmanager.com/gtag/js?id=UA-124921497-1'></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'UA-124921497-1');
+			</script>
+			</body>
+</html>
