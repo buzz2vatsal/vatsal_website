@@ -1,12 +1,21 @@
 function handleIt() {
     const blogname = document.forms["blogForm"]["subject"].value;
     const blogtags = document.forms["blogForm"]["tag"].value;
+    let isreturn=false
     if (blogname == "") {
         alert("Subject must be filled out");
+        isreturn = true;
     }
     if (blogtags == "") {
         alert("Tage must be filled out");
-        return false;
+        isreturn = true;
+    }
+    if (isreturn){
+        return true;
+    }
+    else{
+        console.log(blogname);
+        console.log(blogtags);
     }
 
 }

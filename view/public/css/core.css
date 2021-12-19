@@ -754,9 +754,9 @@ img {
 .s-home {
   margin-bottom: 30px;
 }
-.s-home .ctr {
+/* .s-home .ctr {
   padding: 30px 0 0 0;
-}
+} */
 .s-home .ctr-bg {
   text-align: left;
   background-size: cover;
@@ -821,7 +821,7 @@ img {
 }
 @media screen and (min-width: 800px) {
   .s-home .ctr {
-    padding: 30px 30px;
+    padding: 0px 30px 30px 30px;
   }
   .s-home .bl-logo {
     width: 115px;
@@ -869,7 +869,7 @@ img {
 }
 @media screen and (min-width: 1280px) {
   .s-home .ctr {
-    padding: 110px 0px 55px;
+    padding: 20px 0px 55px;
   }
   .s-home .bl-info .ctr {
     padding: 140px 25px 35px;
@@ -2545,7 +2545,7 @@ h3 {
 /* Стили картинок, видое и фреймов внутри адаптивных плиток */
 img,
 iframe {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
   display: block;
 }
@@ -2584,7 +2584,7 @@ iframe{
   font-size: 27px;
 }
 /* Обрезка текста по высоте */
-.fade {
+.fader {
   overflow: hidden;
   width: 100%;
   display: -webkit-box;
@@ -2593,7 +2593,7 @@ iframe{
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
-.fade:after {
+.fader:after {
   content: "";
   text-align: right;
   position: absolute;
@@ -2676,7 +2676,7 @@ iframe{
     max-width: none;
   }
   .persent-size {
-    width: 50%;
+    width: 48%;
     padding: 2%;
   }
   .item-masonry {
@@ -2717,12 +2717,10 @@ iframe{
     column-count: 2;
     margin: 0 auto;
     *zoom: 1;
+    display: flex;
+    flex-wrap: wrap;
   }
-  .masonry:before,
-  .masonry:after {
-    display: table;
-    content: "";
-  }
+
   .masonry:after {
     clear: both;
   }
@@ -2742,8 +2740,14 @@ iframe{
     font-size: 16px;
     font-size: 1.0666666666666667rem;
   }
+  .bl-slider .article_item {
+    width: 48%;
+  }
 }
 @media screen and (min-width: 1024px) {
+  .bl-slider .article_item {
+    width: 31.33%;
+  }
   h1 {
     font-size: 36px;
     font-size: 2.4rem;
@@ -2834,7 +2838,7 @@ iframe{
     clear: both;
   }
   .persent-size {
-    width: 33.333%;
+    width: 31.333%;
     padding: 2%;
   }
   #disqus_thread {
@@ -2854,4 +2858,27 @@ iframe{
 #disqus_thread {
   max-width: 740px;
   padding-bottom: 40px;
+}
+.bl-slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bl-slider .article_item {
+  padding: 2%;
+}
+.bl-intro{
+  width: 50%;
+}
+.bl-intro-parent{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 10px;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+}
+@media screen and (max-width: 425px) {
+  .bl-intro{
+    width: 100%;
+  } 
 }
