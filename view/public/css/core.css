@@ -2545,7 +2545,7 @@ h3 {
 /* Стили картинок, видое и фреймов внутри адаптивных плиток */
 img,
 iframe {
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -2873,6 +2873,14 @@ iframe{
 .bl-intro{
   width: 50%;
 }
+.flexClass {
+display: flex;
+flex-wrap: wrap;  
+}
+.flex-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}    
 .bl-intro-parent{
   display: flex;
   flex-wrap: wrap;
@@ -2884,7 +2892,7 @@ iframe{
   .bl-intro{
     width: 100%;
   } 
-
+} 
 .bl-tag {
   width: 66.66%;
 }
