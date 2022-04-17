@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="alternate" href="index.html" hreflang="x-default">
+	<link rel="canonical" href="blog.html" />
+
+
+	<meta name="keywords"
+		content="Vatsal's personal website, SAP HANA, Basis, data science, data analytics, data visualization, DevOps, IaaC, ML-AI blog, techbytes" />
+	<meta name="description"
+		content="Vatsal's personal website, SAP HANA, Basis, data science, data analytics, data visualization, DevOps, IaaC, ML-AI blog, techbytes" />
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="robots" content="index, follow" />
+
+	<title>Vatsal's personal website, SAP HANA, Basis, data science, data analytics, data visualization, DevOps, IaaC,
+		ML-AI blog, techbytes </title>
+	<!-- <link type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">	 -->
+	<link type="text/css" href="view/public/css/hamburgers.css" rel="stylesheet" media="screen" />
+	<link type="text/css" href="view/public/css/animate.css" rel="stylesheet" media="screen" />
+	<link type="text/css" href="view/public/css/core.css" rel="stylesheet" media="screen" />
+	<link
+		href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,700i,800,900&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+		rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" type="image/png" href="favicon.png">
+
+
+	<!-- 
+	<script type="text/javascript" src="view/public/js/angular.js"></script>
+	<script type="text/javascript" src="view/public/js/app.js"></script> -->
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="wrap">
+			<div id="header">
+
+			</div>
+			<section class="s-post">
+				<div class="ctr">
+
+					<div class="single-post">
+						<h2>Blog</h2>
+						<h1>The code for recognizing delivery company by tracking number</h1>
+					</div>
+
+					<div class="item item-slider article_item post">
+						<div class="bl-foto">
+							<img id="main_post" itemprop="image" src="../media/img/post/preview/11.png"
+								alt="The code for recognizing delivery company by tracking number">
+						</div>
+
+						<div class="bl_ctr">
+							<div class="bl-info">
+								<div class="bl-date_time">
+									<div class="date">March 29, 2018</div>
+									<div class="time">4 min read</div>
+								</div>
+
+								<div class="bl-tag">
+									<div class="btn-tag">Tags:</div>
+									<ul class="lsn" id="bl_tag">
+										<li><a href="../blogac7a.html?tag=tips%20and%20tricks">tips and tricks</a></li>
+										<li><a href="../blog3097.html?tag=logistics">logistics</a></li>
+										<li><a href="../blog7a17.html?tag=snippet">snippet</a></li>
+										<li><a href="../blog91cc.html?tag=regex">regex</a></li>
+									</ul>
+								</div>
+								<div class="bl-post-text">
+									<p>In this post I'm going to offer you a solution that recognizes a delivery company
+										by tracking number.<br /></p>
+									<p>All companies use their own tracking number format, so I have created special
+										regular expressions for all of them. I read about formats in the official
+										documentation of delivery companies. This solution works for the following
+										services:</p>
+									<ul>
+										<li>UPS</li>
+										<li>USPS</li>
+										<li>FedEX<br /></li>
+									</ul>
+									<p></p>
+									<h4>Formats of tracking numbers</h4>
+									<h5>FedEX</h5>
+									<p>The most common tracking number format is 12 digits or 15 digits.<br />Some other
+										less common formats may also exist, such as 20 digits and 22 digits.</p>
+									<p><u></u>FedEX tracking number examples<u></u><br /></p>
+									<blockquote>9999 9999 9999<br />9999 9999 9999 999<br />9999 9999 9999 9999
+										9999<br />9999 9999 9999 9999 9999 99</blockquote>
+									<h5>UPS</h5>
+									<p>The most common tracking number format is a combination of 18 alphabetic and
+										numeric characters, usually starting with &#34;1Z&#34;. Some other less common
+										formats may also exist.</p>
+									<p>UPS tracking number examples<br /></p>
+									<blockquote>1Z 9999 9999 9999 9999<br />9999 9999 9999<br />T 9999 9999 99<br />9999
+										99999</blockquote>
+									<h5>USPS</h5>
+									<p>The most common tracking number format is 20 digits or a combination of 13
+										alphabetic and numeric characters, usually starting with 2 alphabets, following
+										by 9 digits, and ending with &#34;US&#34;. Some other less common formats may
+										also exist, such as 10 digits.</p>
+									<p><u></u>USPS tracking number examples<u></u><br /></p>
+									<blockquote>USPS Tracking® 9400 1000 0000 0000 0000 00<br />Priority Mail® 9205 5000
+										0000 0000 0000 00<br />Certified Mail® 9407 3000 0000 0000 0000 00<br />Collect
+										On Delivery Hold For Pickup 9303 3000 0000 0000 0000 00<br />Global Express
+										Guaranteed® 82 000 000 00<br /><br />Priority Mail Express International® EC 000
+										000 000 US<br />Priority Mail Express® 9270 1000 0000 0000 0000 00<br />EA 000
+										000 000 US<br />Priority Mail International® CP 000 000 000 US<br />Registered
+										Mail™ 9208 8000 0000 0000 0000 00<br />Signature Confirmation™ 9202 1000 0000
+										0000 0000 00</blockquote>
+									<h4>Code for tracking number recognition (regex)</h4>
+									<h5>FedEx</h5>
+									<pre><code class="python">^[0-9]{20}$<br/>^[0-9]{15}$<br/>^[0-9]{12}$<br/>^[0-9]{22}$<br/></code></pre>
+									<h5>UPS</h5>
+									<pre><code class="python">^(1Z)[0-9A-Z]{16}$<br/>^(T)+[0-9A-Z]{10}$<br/>^[0-9]{9}$<br/>^[0-9]{26}$<br/></code></pre>
+									<h5>USPS</h5>
+									<pre><code class="python">^(94|93|92|94|95)[0-9]{20}$&#10;^(94|93|92|94|95)[0-9]{22}$&#10;^(70|14|23|03)[0-9]{14}$&#10;^(M0|82)[0-9]{8}$&#10;^([A-Z]{2})[0-9]{9}([A-Z]{2})$&#10;</code></pre>
+									<h4>Python script for delivery company recognition</h4>
+									<pre><code class="python">import re&#10;&#10;def recognize_delivery_service(tracking):&#10;    service = None&#10;   &#10;    usps_pattern = [&#10;        '^(94|93|92|94|95)[0-9]{20}$',&#10;        '^(94|93|92|94|95)[0-9]{22}$',&#10;        '^(70|14|23|03)[0-9]{14}$',&#10;        '^(M0|82)[0-9]{8}$',&#10;        '^([A-Z]{2})[0-9]{9}([A-Z]{2})$'&#10;    ]&#10;&#10;    ups_pattern = [&#10;        '^(1Z)[0-9A-Z]{16}$',&#10;        '^(T)+[0-9A-Z]{10}$',&#10;        '^[0-9]{9}$',&#10;        '^[0-9]{26}$'&#10;    ]&#10;    &#10;    fedex_pattern = [&#10;        '^[0-9]{20}$',&#10;        '^[0-9]{15}$',&#10;        '^[0-9]{12}$',&#10;        '^[0-9]{22}$'&#10;    ]&#10;    &#10;    usps = &#34;(&#34; + &#34;)|(&#34;.join(usps_pattern) + &#34;)&#34;&#10;    fedex = &#34;(&#34; + &#34;)|(&#34;.join(fedex_pattern) + &#34;)&#34;&#10;    ups= &#34;(&#34; + &#34;)|(&#34;.join(ups_pattern) + &#34;)&#34;&#10;    &#10;    if re.match(usps, tracking) != None:&#10;        service = 'USPS'&#10;    elif re.match(ups, tracking) != None:&#10;        service = 'UPS'&#10;    elif re.match(fedex, tracking) != None:&#10;        service = 'FedEx'&#10;&#10;    return service&#10;</code></pre>
+									<h4>PHP class for delivery company recognition</h4>
+									<pre><code class="php">class Tracking&#10;{&#9;&#10;&#9;&#10;&#9;public function getPostServiceName($track)&#10;&#9;{&#10;&#9;&#9;$service = '';&#10;&#9;&#9;&#10;&#9;&#9;if($this-&gt;isUSPSTrack($track))&#10;&#9;&#9;{&#10;&#9;&#9;&#9;$service = 'USPS';&#10;&#9;&#9;}&#10;&#9;&#9;elseif ($this-&gt;isUPSTrack($track))&#10;&#9;&#9;{&#10;&#9;&#9;&#9;$service = 'UPS';&#10;&#9;&#9;}&#10;&#9;&#9;elseif ($this-&gt;isFedExTrack($track))&#10;&#9;&#9;{&#10;&#9;&#9;&#9;$service = 'FedEx';&#10;&#9;&#9;}&#10;&#10;&#9;&#9;return $service;&#10;&#9;}&#10;&#10;&#9;private function isUSPSTrack($track)&#10;&#9;{&#10;&#9;&#9;$usps = array();&#10;&#9;&#9;&#10;&#9;&#9;$usps[0] = '^(94|93|92|94|95)[0-9]{20}$';&#10;&#9;&#9;$usps[1] = '^(94|93|92|94|95)[0-9]{22}$';&#10;&#9;&#9;$usps[2] = '^(70|14|23|03)[0-9]{14}$';&#10;&#9;&#9;$usps[3] = '^(M0|82)[0-9]{8}$';&#10;&#9;&#9;$usps[4] = '^([A-Z]{2})[0-9]{9}([A-Z]{2})$';&#10;&#9;&#9;&#10;&#9;&#9;if (preg_match('/('.$usps[0].')|('.$usps[1].')|('.$usps[2].')|('.$usps[3].')|('.$usps[4].')/', $track))&#10;&#9;&#9;{&#10;&#9;&#9;&#9;return true;&#10;&#9;&#9;}&#10;&#9;&#9;&#10;&#9;&#9;return false;&#10;&#9;}&#10;&#9;&#10;&#9;private function isUPSTrack($track)&#10;&#9;{&#10;&#9;&#9;$ups = array();&#10;&#9;&#9;&#10;&#9;&#9;$ups[0] = '^(1Z)[0-9A-Z]{16}$';&#10;&#9;&#9;$ups[1] = '^(T)+[0-9A-Z]{10}$';&#10;&#9;&#9;$ups[2] = '^[0-9]{9}$';&#10;&#9;&#9;$ups[3] = '^[0-9]{26}$';&#10;&#9;&#9;&#10;&#9;&#9;if (preg_match('/('.$ups[0].')|('.$ups[1].')|('.$ups[2].')|('.$ups[3].')/', $track))&#10;&#9;&#9;{&#10;&#9;&#9;&#9;return true;&#10;&#9;&#9;}&#10;&#9;&#9;&#10;&#9;&#9;return false;&#10;&#9;}&#10;&#9;&#10;&#9;private function isFedExTrack($track)&#10;&#9;{&#10;&#9;&#9;$fedex = array();&#10;&#9;&#9;&#10;&#9;&#9;$fedex[0] = '^[0-9]{20}$';&#10;&#9;&#9;$fedex[1] = '^[0-9]{15}$';&#10;&#9;&#9;$fedex[2] = '^[0-9]{12}$';&#10;&#9;&#9;$fedex[3] = '^[0-9]{22}$';&#10;&#9;&#9;&#10;&#9;&#9;if (preg_match('/('.$fedex[0].')|('.$fedex[1].')|('.$fedex[2].')|('.$fedex[3].')/', $track))&#10;&#9;&#9;{&#10;&#9;&#9;&#9;return true;&#10;&#9;&#9;}&#10;&#9;&#9;&#10;&#9;&#9;return false;&#10;&#9;}&#10;}&#10;</code></pre>
+									<h4>To summarize</h4>
+									<p>You can find this code on <a
+											href="https://github.com/SanGreel/Delivery-service-recognition"
+											target="_blank">my GitHub repository</a> related to this topic.</p>
+									<p>If the format has changed or you have found inaccuracies in this information -
+										please leave a comment below.</p>
+									<p>I hope this post was helpful and saved time for you.</p>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="index-public">
+				<div class="ctr">
+					<h3>Other publications</h3>
+
+					<div class="bl-slider">
+
+						<div class="item item-slider article_item">
+							<a class="link" href="../portfolio/usa-ua-international-delivery-company-crm.html">
+								<div class="bl-foto"><img src="../media/img/post/preview/m_2p5x_5.png"
+										alt="USA UA — international delivery company CRM"></div>
+								<h3>USA UA — international delivery company CRM</h3>
+							</a>
+
+							<div class="bl-info ">
+								<div class="bl-date_time">
+									<div class="date">2011-2017</div>
+									<div class="time">5 min read</div>
+								</div>
+								<p class="fade">
+									In this project I developed CRM for international delivery company. It automates big
+									part of possible processes that are related to this area. I created the first
+									version of this application in 2011 and terminated my cooperation with the customer
+									in 2017. Over these 6 years I had implemented hundreds of features and maintained
+									the whole system.
+								</p>
+							</div>
+						</div>
+
+						<div class="item item-slider article_item">
+							<a class="link" href="../portfolio/global-parcel-tracking-system.html">
+								<div class="bl-foto"><img src="../media/img/post/preview/m_2p5x_7.png"
+										alt="Global parcel tracking system"></div>
+								<h3>Global parcel tracking system</h3>
+							</a>
+
+							<div class="bl-info ">
+								<div class="bl-date_time">
+									<div class="date">2016</div>
+									<div class="time">2 min read</div>
+								</div>
+								<p class="fade">
+									Global parcel tracking system is software designed to monitor information and track
+									location of parcels from the biggest (at this moment) US international delivery
+									services.
+								</p>
+							</div>
+						</div>
+
+						<div class="item item-slider article_item">
+							<a class="link" href="../photo/projects/berlin-s-bahn-und-u-bahn.html">
+								<div class="bl-foto"><img src="../media/img/post/preview/m_2p5x_42.png"
+										alt="Berlin: S-Bahn und U-Bahn"></div>
+								<h3>Berlin: S-Bahn und U-Bahn</h3>
+							</a>
+
+							<div class="bl-info ">
+								<div class="bl-date_time">
+									<div class="date">October 21, 2021</div>
+									<div class="time">0 min read</div>
+								</div>
+								<p class="fade">
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div id="footer">
+
+			</div>
+		</div>
+		<script type="text/javascript" src="view/public/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="view/public/js/masonry_ak_own.pkgd.min.js"></script>
+		<script type="text/javascript" src="view/public/js/jquery.viewportchecker.min.js"></script>
+		<script type="text/javascript" src="view/public/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="view/public/js/blog.js"></script>
+		<script type="text/javascript" src="view/public/js/core.js"></script>
+		<script async src='https://www.googletagmanager.com/gtag/js?id=UA-124921497-1'></script>
+		<script>
+			$(function () {
+				$("#header").load("header.html");
+				$("#footer").load("footer.html");
+			});
+		</script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', 'UA-124921497-1');
+		</script>
+
+		<script>
+			setActiveMenuElement('page', 1);
+		</script>
+</body>
+
+</html>
