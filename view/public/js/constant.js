@@ -1,0 +1,1 @@
+export const APIURL = 'https://oi7nrcfmd6.execute-api.ap-south-1.amazonaws.com';
