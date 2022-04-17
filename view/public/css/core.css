@@ -1342,7 +1342,7 @@ img {
 */
   }
   .s-post .ctr {
-    padding: 100px 0 50px 0;
+    padding: 20px 0 350px 0;
   }
   .s-post .bl-foto {
     margin: 0 -65px;
@@ -1381,7 +1381,7 @@ img {
 }
 .s-about .bl-info_dev .bl-foto {
   position: relative;
-  background: url('../img/bg-about_mob.png') 50% 50% no-repeat;
+  /* background: url('../img/bg-about_mob.png') 50% 50% no-repeat; */
   height: 350px;
 }
 .s-about .bl-info_dev .info {
