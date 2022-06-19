@@ -27,6 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm i
-      working-directory: ./ckeditor5
+      working-directory: ckeditor5
     - run: npm run build
-      working-directory: ./ckeditor5
+      working-directory: ckeditor5
