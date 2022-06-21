@@ -28,5 +28,5 @@ jobs:
         cache: 'npm'
         cache-dependency-path: ckeditor5/package-lock.json
     - run: npm i
+    - run : cd /ckeditor5/package.json
     - run: npm run build
-      working-directory: /ckeditor5/package.json
