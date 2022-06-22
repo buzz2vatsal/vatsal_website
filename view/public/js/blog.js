@@ -2,6 +2,7 @@ const APIURL = 'https://oi7nrcfmd6.execute-api.ap-south-1.amazonaws.com';
 
 const fetchAllBlogs = async (params) => {
     const response = await fetch(`${APIURL}/fetchallblog?tags=${params ? params : ''}`, {
+
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -56,6 +57,7 @@ const appendTags = (allTags, params) => {
     });
 }
 
+
 const appendBlogs = (listBlogs) => {
     const blogDiv = document.getElementById("blogList");
     listBlogs.forEach(eachBlog => {
@@ -107,3 +109,4 @@ function tags(tags) {
         }
     }
 }
+

@@ -1,3 +1,4 @@
+
 let newEditor;
 let tagsAdded = false;
 DecoupledDocumentEditor
@@ -62,6 +63,7 @@ function handleIt() {
         }
     } else {
         tagsAdded = false;
+
     }
 }
 
@@ -83,7 +85,6 @@ const addBlogApi = async (apiData) => {
         window.location.href = window.location.origin + '/blog.html';
     }
 }
-
 
 
 const tagelement = document.getElementById("tag");
