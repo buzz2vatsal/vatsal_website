@@ -105,3 +105,32 @@ function addtotagarray() {
     }
 
 }
+
+let imageString;
+function uplaodImage() {
+    const image = document.querySelector('#image')['files'][0];
+    console.log('image', image);
+    let reader = new FileReader();
+    reader.onloadend = function () {
+        const baseString = reader.result;
+        console.log(baseString);
+        imageString = baseString.split('data:image/jpeg;base64,');
+        console.log(imageString, 'check');
+        uplaodImageApi({image: uplaodImageApi})
+    };
+    reader.readAsDataURL(image);
+}
+
+const uplaodImageApi = async(imageData) => {
+    const response = await fetch(`${APIURL}/addimage`, {
+        method: 'POST',
+        body: JSON.stringify(imageData)
+        // headers:{
+        //     'Access-Control-Allow-Headers': 'Content-Type',
+        //     'Access-Control-Allow-Credentials': false,
+        //     'Access-Control-Allow-Origin': '*'
+        // }
+    });
+    const apiResponse = await response.json();
+    console.log(apiResponse, 'api respp');
+}
