@@ -1,6 +1,6 @@
-
 let newEditor;
 let tagsAdded = false;
+let imageUrl = "";
 DecoupledDocumentEditor
     .create(document.querySelector('#editor'))
     .then(editor => {
@@ -33,7 +33,8 @@ function handleIt() {
             || altText == ""
             || subTitle == ""
             || specialMention == ""
-            || sequence == "") {
+            || sequence == ""
+            || imageUrl == "") {
             isreturn = true;
         }
         if (!tagarrary.length) {
@@ -46,9 +47,10 @@ function handleIt() {
             return;
         }
         else {
+            console.log(imageUrl, '');
             addBlogApi(
                 {
-                    thumbnail_image: 'https://reactjs.org/logo-og.png',
+                    thumbnail_image: imageUrl,
                     image_caption: imageCaption,
                     alt_text: altText,
                     title: title,
@@ -63,7 +65,6 @@ function handleIt() {
         }
     } else {
         tagsAdded = false;
-
     }
 }
 
@@ -87,6 +88,7 @@ const addBlogApi = async (apiData) => {
 }
 
 
+
 const tagelement = document.getElementById("tag");
 tagelement.addEventListener("keydown", function (e) {
     if (e.keyCode == 13) {
@@ -105,7 +107,6 @@ function addtotagarray() {
     }
 
 }
-
 let imageString;
 function uplaodImage() {
     const image = document.querySelector('#image')['files'][0];
@@ -116,7 +117,7 @@ function uplaodImage() {
         console.log(baseString);
         imageString = baseString.split('data:image/jpeg;base64,');
         console.log(imageString, 'check');
-        uplaodImageApi({image: uplaodImageApi})
+        uplaodImageApi({ name: image.name, image: imageString[1] })
     };
     reader.readAsDataURL(image);
 }
@@ -131,6 +132,6 @@ const uplaodImageApi = async(imageData) => {
         //     'Access-Control-Allow-Origin': '*'
         // }
     });
-    const apiResponse = await response.json();
-    console.log(apiResponse, 'api respp');
+    const uploadedImageData = await response.json();
+    imageUrl = uploadedImageData.imageurl;
 }
